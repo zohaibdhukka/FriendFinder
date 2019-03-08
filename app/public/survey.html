@@ -6,7 +6,7 @@
         <title>Page Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
-     
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -195,7 +195,7 @@
                         </div>
                     </div>
                 </div>
-                <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+                
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
             
@@ -236,8 +236,8 @@
                                                     scores: score
                                                 }
 
-                                                var currentURL = window.location.origin;
-                                                $.post(currentURL + "/api/friends", uData, function(data) {
+                                                // var currentURL = window.location.origin;
+                                                $.post("/api/friends", uData, function(data) {
                                                     console.log(data);
                                                     $("#matchName").text(data.name);
                                                     $("#matchPic").attr("src", data.photo);
